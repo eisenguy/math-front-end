@@ -1,0 +1,11 @@
+# Based on the instructions at
+# https://ngmilk.rocks/2015/03/09/angularjs-html5-mode-or-pretty-urls-on-apache-using-htaccess/
+RewriteEngine On
+
+# If an existing asset or directory is rqeuested, go to it as is
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -f [OR]
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -d
+RewriteRule ^ - [L]
+
+# If the requested resource doesn't exist, user index.html
+RewriteRule ^ /index.html
