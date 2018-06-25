@@ -16,4 +16,4 @@ before_script:
 
 script:
   - ng build --prod --aot
-  - xvfb-run ng test --watch false
+  - ng test --watch false
