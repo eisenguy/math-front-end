@@ -30,7 +30,7 @@ module.exports = function (config) {
     };
 
     if(process.env.TRAVIS) {
-        configuration.browsers = ['ChromeHeadless'];
+//        configuration.browsers = ['ChromeHeadless'];
     }
 
     config.set(configuration);
