@@ -29,9 +29,5 @@ module.exports = function (config) {
         singleRun: false
     };
 
-    if(process.env.TRAVIS) {
-//        configuration.browsers = ['ChromeHeadless'];
-    }
-
     config.set(configuration);
 };

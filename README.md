@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/eisenguy/math-front-end.svg?branch=master)](https://travis-ci.org/eisenguy/math-front-end)
+
 # math-front-end
 Front end for math quiz website
 # MathFrontEnd
