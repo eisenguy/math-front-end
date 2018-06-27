@@ -5,7 +5,7 @@ dist: trusty
 sudo: required
 addons:
   chrome: stable
-  ssh_known_hosts: ${HOSTING_HOST}
+  ssh_known_hosts: web0101.zxcs.nl
 branches:
   only:
   - master
