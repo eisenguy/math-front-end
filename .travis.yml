@@ -5,6 +5,7 @@ dist: trusty
 sudo: required
 addons:
   chrome: stable
+  ssh_known_hosts: ${HOSTING_HOST}
 branches:
   only:
   - master
