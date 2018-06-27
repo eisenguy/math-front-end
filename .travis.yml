@@ -15,7 +15,7 @@ script:
 - xvfb-run -- ng test --watch false
 deploy:
   provider: script
-  script: "ssh ${HOSTING_HOST} -p ${HOSTING_PORT} -i vimexx_travis_openssh -l ${HOSTING_USERNAME} echo Hello. It is $(date)s."
+  script: ssh ${HOSTING_HOST} -p ${HOSTING_PORT} -i vimexx_travis_openssh -l ${HOSTING_USERNAME} echo Hello. It is $(date)s.
   on:
     branch: master
 before_install:
