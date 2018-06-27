@@ -16,6 +16,7 @@ script:
 - xvfb-run -- ng test --watch false
 deploy:
   provider: script
+  skip_cleanup: true
   script:
   - pwd
   - ls
