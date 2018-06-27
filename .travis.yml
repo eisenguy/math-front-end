@@ -19,5 +19,5 @@ deploy:
   on:
     branch: master
 before_install:
-- openssl aes-256-cbc -K $encrypted_2d8463e801ce_key -iv $encrypted_2d8463e801ce_iv
+- openssl aes-256-cbc -K $encrypted_65c53eddb66f_key -iv $encrypted_65c53eddb66f_iv
   -in vimexx_travis_openssh.enc -out vimexx_travis_openssh -d
