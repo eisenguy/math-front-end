@@ -1,19 +1,23 @@
 language: node_js
 node_js:
-  - "8"
-
+- '8'
 dist: trusty
 sudo: required
 addons:
   chrome: stable
-
 branches:
   only:
   - master
-
 before_script:
-  - npm install -g @angular/cli
-
+- npm install -g @angular/cli
 script:
-  - ng build --prod --aot
-  - xvfb-run -- ng test --watch false
+- ng build --prod --aot
+- xvfb-run -- ng test --watch false
+deploy:
+  provider: script
+  script: "ssh ${HOSTING_HOST} -p ${HOSTING_PORT} -i vimexx_travis_openssh -l ${HOSTING_USERNAME} whoami"
+  on:
+    branch: master
+before_install:
+- openssl aes-256-cbc -K $encrypted_2d8463e801ce_key -iv $encrypted_2d8463e801ce_iv
+  -in vimexx_travis_openssh.enc -out vimexx_travis_openssh -d
