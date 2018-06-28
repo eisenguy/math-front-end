@@ -1,7 +1,4 @@
 #!/bin/bash
 
-echo "I have made it into the deploy script :)"
-pwd
-ls -l
 
-ssh web0101.zxcs.nl -p 7685 -i vimexx_travis_openssh -l u31699p26638 touch /home/u31699p26638/hello
+ssh "${HOSTING_HOST}" -p "${HOSTING_PORT}" -i vimexx_travis_openssh -l "${HOSTING_USERNAME}" touch /home/${HOSTING_USERNAME}/hello
